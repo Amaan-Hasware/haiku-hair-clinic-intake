@@ -105,6 +105,15 @@ def submit():
         json.dump(filled_fields, f, indent=2)
     return jsonify({"status": "saved", "filled_fields": filled_fields})
 
+# Reset route — clears session state for a new conversation
+@app.route("/reset", methods=["POST"])
+def reset():
+    global chat_history
+    chat_history = []
+    for key in filled_fields:
+        filled_fields[key] = None
+    return jsonify({"status": "reset"})
+
 # run the app
 if __name__ == "__main__":
     app.run(debug=True)

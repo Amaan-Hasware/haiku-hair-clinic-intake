@@ -529,6 +529,46 @@ body {
 .proceed-btn:hover  { background: var(--brand); }
 .proceed-btn:active { transform: scale(0.98); }
 
+/* --- RESET SESSION BUTTON (header) --- */
+.reset-btn {
+  flex-shrink: 0;
+  padding: 7px 14px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.reset-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* --- DOWNLOAD BUTTON (completion card) --- */
+.download-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 13px;
+  background: transparent;
+  color: var(--brand);
+  border: 1.5px solid var(--brand);
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+.download-btn:hover  { background: var(--accent-soft); }
+.download-btn:active { transform: scale(0.98); }
+
 /* --- REDUCED MOTION --- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
