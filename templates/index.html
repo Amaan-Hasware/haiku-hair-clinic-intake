@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenoRoot Intake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">G</span>
+      <span class="brand-name">GenoRoot</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="fields-count">0</span><span class="progress-total">/16 fields</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CHAT AREA -->
+  <main class="chat-area" id="chat-area">
+
+    <!-- Initial AI greeting message -->
+    <div class="message ai-message" id="greeting">
+      <div class="avatar">GR</div>
+      <div class="bubble">
+        <p>Hello! I'm here to help GenoRoot get a complete picture of your hair health before your consultation.</p>
+        <p>It'll feel more like a conversation than a form — just answer naturally and we'll get through it together.</p>
+        <p>Whenever you're ready, just say <strong>hi</strong> or tell me a little about what's been going on.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- INPUT BAR -->
+  <footer class="input-bar">
+    <div class="input-wrap">
+      <textarea
+        id="user-input"
+        class="user-input"
+        placeholder="Type your response here…"
+        rows="1"
+        autocomplete="off"
+        spellcheck="true"
+      ></textarea>
+      <button class="send-btn" id="send-btn" aria-label="Send message">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+    <p class="input-hint" id="input-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</p>
+    <!-- Shown only when all 16 fields are filled -->
+    <button class="proceed-btn" id="proceed-btn" style="display:none;">Proceed to Next Step →</button>
+  </footer>
+
+  <!-- COMPLETION SCREEN (shown only after proceed button is clicked) -->
+  <div class="completion-overlay" id="completion-overlay" style="display:none;">
+    <div class="completion-card">
+      <div class="completion-icon">✓</div>
+      <h2>All done!</h2>
+      <p>We have everything we need. A GenoRoot specialist will review your intake and reach out to confirm your consultation.</p>
+      <button class="submit-btn" id="submit-btn">Submit & Confirm</button>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Environment variables — never push API keys
+.env
+
+# Patient data — never push real intake results
+intake_result.json
+
+# Virtual environment — too large, recreated via requirements.txt
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
