@@ -16,7 +16,7 @@ api_key = os.getenv("GOOGLE_API_KEY")
 client = genai.Client(api_key=api_key)
 
 # giving model name to use
-MODEL = "gemini-3.5-flash-lite"
+MODEL = "gemini-1.5-flash"
 
 # creating the flask app
 app = Flask(__name__)
